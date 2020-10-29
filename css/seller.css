@@ -1,0 +1,49 @@
+.newproductscontainer{
+    padding-top:40px;
+    margin-left:330px;
+    padding-bottom: 200px;
+}
+.p_form {
+    border: 3px solid #f1f1f1;
+  }
+  
+.containerform {
+    padding: 16px;
+  }
+
+  .p_input[type=text], .p_input[type=password], .p_input[type=tel] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+ 
+  .p_button {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    float:right;
+    
+  }
+  
+  .cancelbtn {
+    width: 30%;
+    background-color: #f44336;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+  }
+
+  .p_button:hover {
+    opacity: 0.8;
+  }
+  
