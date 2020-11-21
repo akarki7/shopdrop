@@ -3,6 +3,8 @@ $servername = "10.72.1.14"; //clabsql
 $username = "group13"; //grouname
 $password = "ObCMxC"; //group password
 $database_name="group13";
+ 
+
 // Create connection
 $conn = new mysqli($servername, $username, $password,$database_name);
  
@@ -14,30 +16,30 @@ if ($conn->connect_error) {
  
  
  
-$category=$_POST['Category'];
-$productid=$_POST['productid'];
-
+$email=$_POST['u_email'];
+$pass=$_POST['psw'];
  
-$sql="INSERT INTO belongs_to (product_ID, category_ID) VALUES ($productid,$category);";
+$sql="SELECT * FROM Administrator;";
  
 $query=$conn->query($sql);
- 
- 
-if ($query===TRUE) //checking if query is succesfull or not
-{ //success
-   header("Location:Response.php?status=200"); //change
+
+$row = mysqli_fetch_array($query);
+$admin_email=$row['email'];
+$admin_pass=$row['u_password'];
+
+if($admin_email==$email AND $admin_pass==$pass)
+{
+    session_start();
+    $_SESSION["email"]=1;
+    $_SESSION["duration"]=time();
+    header("Location:maintenance.php");
 }
 else
-{//failure
-   header("Location:Response.php?status=302");
+{
+    header("Location:error_page.php");
 }
  
  
 $conn->close();
 exit();
 ?>
- 
- 
- 
- 
-

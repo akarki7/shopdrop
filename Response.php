@@ -11,4 +11,4 @@
     }
    
 ?>
- <h2><a href="maintenance.html#maintenance">CLICK  here to return back to maintenance page</a></h2>
+ <h2><a href="maintenance.php#maintenance">CLICK  here to return back to maintenance page</a></h2>
