@@ -3,6 +3,7 @@ $servername = "10.72.1.14"; //clabsql
 $username = "group13"; //grouname
 $password = "ObCMxC"; //group password
 $database_name="group13";
+
 $conn = new mysqli($servername, $username, $password,$database_name);
       // Check connection
       if ($conn->connect_error) {

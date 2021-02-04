@@ -29,7 +29,7 @@
                     <div>
                     <ul>
                             <li><p><a href="searchproduct.php#searchproduct" class="main-header">Search Product</a></p></li>
-                            <li><p><a href="searchcustomer#searchcustomer" class="main-header">Purchase History</a></p></li>
+                            <li><p><a href="searchcustomer.php#searchcustomer" class="main-header">Purchase History</a></p></li>
                             <li><p><a href="searchseller.php#searchseller" class="main-header">Search Seller</a></p></li>  
                     </ul>
                     </div>

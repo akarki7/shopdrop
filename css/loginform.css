@@ -5,13 +5,28 @@
   }
   
   /* Full-width inputs */
-  .login_input[type=text], .login_input[type=password], .login_input[type=tel] {
+  .login_input[type=text], .login_input[type=password], .login_input[type=tel],.login_input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+  }
+
+  .login_input2[type=tel]{
+    width: 20%;
+    height:30px;
+    padding: 12px 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .Prange{
+    display:flex;
   }
   
   
@@ -73,10 +88,6 @@
     opacity: 0.8;
   }
   
-  .bankfullcontainer{
-    padding-top:70px;
-    padding-bottom: 20px;
-}
 
 .register_container{
   padding-top: 50px;
@@ -87,7 +98,7 @@
 .catinput
 {
   margin-left:330px;
-  padding-top: 60px;
+  padding-top: 120px;
   padding-bottom: 300px;
 }
 .payinput
@@ -95,4 +106,20 @@
   margin-left:330px;
   padding-top: 120px;
   padding-bottom: 270px;
+}
+
+.searchtable
+{
+  margin-left:330px;
+  padding-top: 120px;
+  padding-bottom: 270px;
+
+}
+
+.searchtable2
+{
+  margin-left:330px;
+  padding-top: 120px;
+  padding-bottom: 300px;
+
 }

@@ -8,10 +8,15 @@ body {
   height: auto;
   background-color:white;
   margin:0 auto; /*center page while zooming out*/
+  position: relative;
+  display:block;
+  min-height: 100vh;/*100% of viewport*/
+  overflow: hidden;
+  padding-bottom: 250px;/*height of footer*/
 }
 
 #content-wrap {
-  padding-bottom: 0px;    /* Footer height */
+  padding-bottom: 40px;    /* Footer height */
 }
 
 a {
@@ -66,9 +71,6 @@ a {
 
 /*left section--categories and stuffs*/
 
-.secondrow{
-  display: inline-block;
-}
 
 .leftsection{
   padding-left: 10px;
@@ -167,7 +169,8 @@ a {
 /*Footer*/
 
 .foot-distributed{
-  bottom: 0;
+  position: absolute;
+  bottom:0;
   height: 250px;
   background-color:  #575656;
 	box-sizing: border-box;
@@ -321,4 +324,11 @@ a {
       background-color: rgb(0, 0, 0);
 }
 
+.errorline{
+  margin-left:330px;
+  padding-top: 100px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
 

@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost"; //
+$servername = "localhost"; //clabsql
 $username = "root"; //grouname
 $password = ""; //group password
-$database_name="HW4";
+$database_name="ShopDropTest";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password,$database_name);

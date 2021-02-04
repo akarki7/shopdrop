@@ -16,7 +16,7 @@
             <p><a href="AboutUs.html#AboutUs" class="category-header">About Us</a></p>
         </div>
         <div>
-            <p><a href="contact.html#contact" class="category-header">Contact Us</a></p>
+            <p><a href="Map.php#Map" class="category-header">Current Location</a></p>
         </div>
         <div>
             <p><a href="imprint.php#imprint" class="category-header">Imprint</a></p>

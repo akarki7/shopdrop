@@ -30,8 +30,8 @@
                         <form action="searchcustomerhelper.php" method="POST" class="l_form">
                             <div class="containerform">
           
-                                <label for="email"><b>Email</b></label>
-                                <input type="email" class="login_input" placeholder="email" name="email" required>
+                                <label for="autocomplete3"><b>Email</b></label>
+                                <input id="autocomplete3" type="email" class="login_input" placeholder="email" name="email" required>
 
                                 <label for="Psort"><b>Criteria to sort Price</b></label>
                               <select name = "Psort">
@@ -61,5 +61,52 @@
     <script src="js/top.js"></script>
     </div>
     
+
+    <script>
+            
+            var data=[];
+            $("#autocomplete3").on('input',function(e) //after every character typed notice changes
+            {
+                data=[];
+                //alert("Cool");
+                //ajax starts
+                var ajax = new XMLHttpRequest();
+                var method= "GET";
+                var url="automaticinputemailcustomer.php";
+                var asynchronous=true;
+
+                ajax.open(method,url,asynchronous)
+                ajax.send();
+
+                ajax.onload=function()
+                {
+                    if (this.status==200)
+                    {
+                        //convert JSON back to array
+                        var test= JSON.parse(this.responseText);
+
+                        console.log(test); //for debugging
+                        
+                        for(var mem of test)
+                        {
+                            data.push(mem);
+                        }
+                    }
+                    else{
+                        console.log("Unable to retrieve data. Status:",this.status);
+                    }
+                }
+            });
+            //ajax ends here
+
+            $("#autocomplete3").autocomplete({
+                source: function (request, response) {
+                    var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(request.term), "i");
+                    response($.grep(data, function (item) {
+                        return matcher.test(item);
+                    }));
+                }
+            });
+    </script>
 </body>
 </html>
