@@ -1,0 +1,26 @@
+.product-container
+{
+  margin-left:330px;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+.product-photo{
+    margin-left: 300px;
+}
+
+.product-details{
+    padding-top: 50px;
+    margin-left: 300px;
+}
+
+.result-container{
+    margin-left:450px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+
+.result-heading{
+    text-transform:uppercase;
+    text-align: center;
+}

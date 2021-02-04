@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Autocomplete functionality</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="ui-widget">
+        <p>SEARCH FOR PRODUCTS</p>
+        <label for="automplete-1">Tags: </label>
+        <input id="automplete-1">
+    </div>
+
+    <script>
+            
+        var data=[];
+        $("#automplete-1").on('input',function(e) //after every character typed notice changes
+        {
+            data=[];
+            //alert("Cool");
+            //ajax starts
+            var ajax = new XMLHttpRequest();
+            var method= "GET";
+            var url="/public_html/automaticinputproduct.php";
+            var asynchronous=true;
+
+            ajax.open(method,url,asynchronous)
+            ajax.send();
+
+            ajax.onload=function()
+            {
+                if (this.status==200)
+                {
+                    //convert JSON back to array
+                    var test= JSON.parse(this.responseText);
+
+                    console.log(test); //for debugging
+                    
+                    for(var mem of test)
+                    {
+                        data.push(mem);
+                    }
+                }
+                else{
+                    console.log("Unable to retrieve data. Status:",this.status);
+                }
+            }
+        });
+        //ajax ends here
+
+        $("#automplete-1").autocomplete({
+            source: function (request, response) {
+                var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(request.term), "i");
+                response($.grep(data, function (item) {
+                    return matcher.test(item);
+                }));
+            }
+        });
+</script>
+
+</body>
+
+</html>
