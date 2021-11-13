@@ -1,3 +1,4 @@
+<!-- mysql://b092d55fddc757:c9372d7a@eu-cdbr-west-01.cleardb.com/heroku_25e0815804b934e?reconnect=true -->
 <?php
     $servername = "10.72.1.14"; //clabsql
     $username = "group13"; //grouname
